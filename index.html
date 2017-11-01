@@ -5,9 +5,33 @@
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <title>Pig Dice</title>
+    <title>Welcome to the Oink Palace</title>
   </head>
   <body>
+    <div class="container-responsive">
+      <h1>Welcome to the Oink Palace</h1>
+      <div class="row" id="start-screen"> <!-- START SCREEN -->
+        <form id="player-names" class="col-md-12">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="PlayerOne">Enter Name, Player One:</label>
+              <input type="text" class="form-control" id="playerOne-name" placeholder="Player One">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="PlayerTwo">Enter Name, Player Two:</label>
+              <input type="text" class="form-control" id="playerTwo-name" placeholder="Player One">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-block btn-primary">Submit</button>
+        </form>
+        <p id="name-warning" class="lead hide">Please enter a name for both players</p>
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-success" id="roll-button">ROLL</button>
+      </div>
 
+    </div>
   </body>
 </html>
