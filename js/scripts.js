@@ -37,12 +37,10 @@ $(function() {
 
   $("#roll-button").click(function() {
     var rollDieReturn = rollDie();
-    var playerScore = allPlayers[currentPlayer].turnScore
     if (rollDieReturn > 1) {
-      playerScore = playerScore + rollDieReturn;
-      allPlayers[currentPlayer].turnScore = playerScore;
+      allPlayers[currentPlayer].turnScore += rollDieReturn;
     } else if (rollDieReturn === 1) {
-      playerScore = 0;
+      allPlayers[currentPlayer].turnScore = 0;
       if (currentPlayer === 0) {
         currentPlayer = 1
       } else if (currentPlayer === 1) {
@@ -52,5 +50,13 @@ $(function() {
     console.log(currentPlayer + " " + rollDieReturn + " " + playerScore)
   });
 
+  $("#hold-button").click(function(){
+    var addScore =
 
+    if (currentPlayer === 0) {
+      currentPlayer = 1;
+    } else if (currentPlayer === 1) {
+      currentPlayer = 0;
+    };
+  });
 });
