@@ -28,8 +28,8 @@ $(function() {
     event.preventDefault();
     if ($("#playerOne-name").val() && $("#playerTwo-name").val()) {
       newGame($("#playerOne-name").val(), $("#playerTwo-name").val());
-      $("#start-screen").slideUp();
-      $("#play-screen").slideDown();
+      $("#start-screen").slideToggle().css('display', 'flex');
+      $("#play-screen").slideToggle().css('display', 'flex');
       $("#name-warning").hide();
     } else {
       $("#name-warning").show();

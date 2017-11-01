@@ -3,34 +3,49 @@
   <head>
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <title>Welcome to the Oink Palace</title>
+    <title>OUTSWINED</title>
   </head>
-  <body>
-    <div class="container-responsive">
-      <div class="header col-md-12 text-center">
-        <h1>Welcome to the Oink Palace</h1>
-      </div>
-      <div class="row" id="start-screen"> <!-- START SCREEN -->
-        <form id="player-names" class="col-md-12">
-          <div class="form-row">
-            <div class="col">
-              <label for="PlayerOne">Enter Name, Player One:</label>
-              <input type="text" class="form-control" name="player-form" id="playerOne-name" placeholder="Player One">
-            </div>
-            <div class="col">
-              <label for="PlayerTwo">Enter Name, Player Two:</label>
-              <input type="text" class="form-control" name="player-form" id="playerTwo-name" placeholder="Player One">
-            </div>
+  <body class="full">
+    <div class="container-responsive fullheight">
+      <div class="row">
+        <div class="col-md-2 text-left" id="left-column"> <!-- PLAYER 1 INFO HERE -->
+          <h5 class="underline">Player One</h5>
+          <h6>000</h6>
+        </div>
+        <div class="col-md-8" id="center-column">
+          <div class="header col-md-12 text-center">
+            <h1 class="display-3">OUTSWINED</h1>
           </div>
-          <button type="submit" class="btn btn-block btn-primary">Submit</button>
-        </form>
-        <p id="name-warning" class="lead hide">Please enter a name for both players</p>
+        </div>
+        <div class="col-md-2 text-right" id="right-column"> <!-- PLAYER 2 INFO HERE -->
+          <h5 class="underline">Player Two</h5>
+          <h6>000</h6>
+        </div>
       </div>
-      <div class="row hide" id="play-screen"> <!-- PLAY SCREEN -->
-        <button type="button" class="btn btn-success" id="roll-button">ROLL</button>
-        <button type="button" class="btn btn-success" id="hold-button">HOLD</button>
+
+      <div class="row text-center fullheight justify-content-center align-items-center" id="start-screen"> <!-- START SCREEN -->
+        <form id="player-names" class="col-md-8">
+          <div>
+            <label for="PlayerOne">Enter Name, Player One:</label>
+            <input type="text" name="player-form" id="playerOne-name" placeholder="Player One">
+          </div>
+          <div>
+            <label for="PlayerTwo">Enter Name, Player Two:</label>
+            <input type="text" name="player-form" id="playerTwo-name" placeholder="Player Two">
+          </div>
+          <button type="submit" class="our-button">Submit</button>
+          <p id="name-warning" class="lead hide">Please enter a name for both players</p>
+        </form>
+      </div>
+      <div class="row text-center fullheight justify-content-center align-items-center" id="play-screen"> <!-- PLAY SCREEN -->
+        <div class="col-md-8">
+          <button type="button" class="our-button" id="roll-button">ROLL</button>
+          <button type="button" class="our-button" id="hold-button">HOLD</button>
+
+        </div>
       </div>
       <div class="row hide" id="winner-screen"> <!-- WINNER SCREEN -->
 

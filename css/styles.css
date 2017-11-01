@@ -1,3 +1,35 @@
-.hide {
+html {
+  height: 100%;
+}
+
+body {
+  background-repeat: no-repeat;
+  font-family: 'Press Start 2P', cursive;
+  background: radial-gradient(#213323, black);
+  padding: 30px;
+  height: 100%;
+  color: #30c946
+}
+
+.fullheight {
+  height: 90%
+}
+
+#player-names input, #player-names button , .our-button {
+  width: 100%;
+  display: block;
+  font-size: 30px;
+  background: transparent;
+  border: 3px solid #30c946;
+  color: #30c946;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+#play-screen, #name-warning{
   display: none;
 }
