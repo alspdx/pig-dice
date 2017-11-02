@@ -26,10 +26,50 @@ body {
   text-align: center;
 }
 
+.play-button {
+  width: 100%;
+  display: block;
+  font-size: 50px;
+  background: transparent;
+  border: 3px solid #30c946;
+  color: #30c946;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .underline {
   text-decoration: underline;
 }
 
-#play-screen, #name-warning{
+#play-screen, #name-warning, #winner-screen, #next-player-screen {
   display: none;
+}
+
+.outline {
+  border: 1px solid white;
+}
+
+.prettybig {
+    font-size: 36px;
+}
+
+.superbig {
+  font-size: 250px;
+}
+
+.card {
+    background: transparent;
+    border: none;
+}
+
+#winner-screen {
+  padding-top: 140px;
+}
+
+#die-select-screen {
+  display: none;
+}
+
+#hog-img {
+  height: 100%;
 }

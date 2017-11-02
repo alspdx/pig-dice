@@ -8,24 +8,26 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <title>OUTSWINED</title>
   </head>
-  <body class="full">
+  <body>
     <div class="container-responsive fullheight">
+      <div class="row text-center fullheight justify-content-center align-items-center" id="die-select-screen">
+        <button type="submit" class="our-button">Submit</button>
+      </div>
       <div class="row">
-        <div class="col-md-2 text-left" id="left-column"> <!-- PLAYER 1 INFO HERE -->
-          <h5 class="underline">Player One</h5>
-          <h6>000</h6>
+        <div class="col-md-3 text-left" id="left-column"> <!-- PLAYER 1 INFO HERE -->
+          <h5 class="underline">Player One: <span id="player-one-name-input"></span></h5>
+          <h6><span id="player-one-score-output"></span></h6>
         </div>
-        <div class="col-md-8" id="center-column">
+        <div class="col-md-6" id="center-column justify-content-center">
           <div class="header col-md-12 text-center">
             <h1 class="display-3">OUTSWINED</h1>
           </div>
         </div>
-        <div class="col-md-2 text-right" id="right-column"> <!-- PLAYER 2 INFO HERE -->
-          <h5 class="underline">Player Two</h5>
-          <h6>000</h6>
+        <div class="col-md-3 text-right" id="right-column"> <!-- PLAYER 2 INFO HERE -->
+          <h5 class="underline">Player Two: <span id="player-two-name-input"></span></h5>
+          <h6><span id="player-two-score-output"></span></h6>
         </div>
       </div>
-
       <div class="row text-center fullheight justify-content-center align-items-center" id="start-screen"> <!-- START SCREEN -->
         <form id="player-names" class="col-md-8">
           <div>
@@ -40,16 +42,54 @@
           <p id="name-warning" class="lead hide">Please enter a name for both players</p>
         </form>
       </div>
-      <div class="row text-center fullheight justify-content-center align-items-end" id="play-screen"> <!-- PLAY SCREEN -->
-        <div class="col-md-8">
-          <button type="button" class="our-button" id="roll-button">ROLL</button>
-          <button type="button" class="our-button" id="hold-button">HOLD</button>
+      <div class="row text-center fullheight justify-content-center" id="play-screen"> <!-- PLAY SCREEN -->
+        <div class="col-md-12">
+          <h1 class="justify-self-center"><span class="current-player-name"></span></h1>
+        </div>
+        <div class="col-md-10 align-self-end">
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h1 class="superbig"><span id="die-roll-output"></span></h1>
+                <h4 class="prettybig">Current Roll</h4>
+                <button type="button" class="play-button" id="roll-button">ROLL</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body ">
+                <h1 class="superbig"><span id="turn-score-output"></span></h1>
+                <h4 class="prettybig">Turn Score</h4>
+                <button type="button" class="play-button" id="hold-button">HOLD</button>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
-      <div class="row hide" id="winner-screen"> <!-- WINNER SCREEN -->
-
+      <div class="text-center justify-content-center" id="winner-screen"> <!-- WINNER SCREEN -->
+        <div class="text-center justify-content-center">
+          <div class="col-md-12">
+            <h1 class="prettybig">Congratulations, <span id="winner-name-output"></span>!</h1>
+            <p>You really outswined <span id="loser-name-output"></span>!</p>
+          </div>
+          <div class="col-md-4 offset-4">
+            <img  id="#hog-img" src="img/hog.png" class="img-fluid" alt="8-bit piggy">
+          </div>
+        </div>
       </div>
+
+
+      <div class="text-center justify-content-center" id="next-player-screen"> <!-- next-player-screen -->
+        <div class="text-center justify-content-center align-items-center">
+          <div class="col-md-12">
+            <h1 class="prettybig">Ready, <span class="current-player-name"></span>!</h1>
+            <button type="button" class="our-button" id="player-ready">Ready!</button>
+          </div>
+
+        </div>
+      </div>
+
+
     </div>
   </body>
 </html>
